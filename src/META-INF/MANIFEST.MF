@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Main-Class: ap.co.service.keypress.AutoPressMain
+Class-Path: commons-lang3-3.12.0.jar src.zip javafx-swt.jar javafx.web.j
+ ar javafx.base.jar javafx.fxml.jar javafx.media.jar javafx.swing.jar ja
+ vafx.controls.jar javafx.graphics.jar javafx-fxml-16.jar javafx-fxml-16
+ -win.jar javafx-controls-16.jar javafx-controls-16-win.jar javafx-graph
+ ics-16.jar javafx-graphics-16-win.jar javafx-base-16.jar javafx-base-16
+ -win.jar jna-5.8.0.jar jna-platform-5.8.0.jar jnativehook-2.2-20210323.
+ 163306-38.jar
+

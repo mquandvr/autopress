@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" prefHeight="249.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ap.co.service.keypress.AutoPressController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="274.0" prefWidth="655.0">
+         <bottom>
+            <Pane prefHeight="68.0" prefWidth="655.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnStart" layoutX="14.0" mnemonicParsing="false" onAction="#onStartClick" prefHeight="58.0" prefWidth="132.0" text="Start KeyPressing" />
+                  <Button fx:id="btnStop" layoutX="165.0" mnemonicParsing="false" onAction="#onStopClick" prefHeight="58.0" prefWidth="132.0" text="Stop KeyPressing" />
+                  <Label fx:id="lblCurrentStatus" layoutX="328.0" layoutY="10.0" text="Current status:" />
+                  <Label fx:id="lblMsg" layoutX="328.0" layoutY="36.0" text="msg" textFill="RED" />
+                  <Label fx:id="lblCount" layoutX="510.0" layoutY="10.0" text="Count" />
+               </children>
+            </Pane>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="92.0" prefWidth="655.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="104.0" prefWidth="655.0">
+                     <children>
+                        <Text layoutX="29.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key to Automate:" wrappingWidth="113.13671875" />
+                        <ComboBox fx:id="cbxKey1" layoutX="29.0" layoutY="30.0" prefWidth="150.0" />
+                        <Text layoutX="205.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shortcut Key to Start / Stop Key Pressing:" wrappingWidth="93.734375" />
+                        <Button fx:id="btnSave" layoutX="522.0" layoutY="12.0" mnemonicParsing="false" onAction="#onSaveClick" prefHeight="37.0" prefWidth="105.0" text="Save" />
+                        <Label layoutX="205.0" layoutY="70.0" text="Target:" />
+                        <TextField fx:id="txtTarget" layoutX="299.0" layoutY="66.0" />
+                        <Button fx:id="btnClear" layoutX="522.0" layoutY="52.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="37.0" prefWidth="105.0" text="Clear" />
+                        <ComboBox fx:id="cbxShortcut" layoutX="298.0" layoutY="30.0" prefWidth="150.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <Pane maxHeight="75.0" prefHeight="75.0" prefWidth="648.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="24.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delay between Keys:" />
+                  <AnchorPane layoutX="143.0" layoutY="-1.0" prefHeight="69.0" prefWidth="104.0" style="-fx-border-insets: 8 0 0 0; -fx-background-color: inherit; -fx-border-color: #DCDCDC;">
+                     <children>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" style="-fx-padding: 0 5; -fx-background-color: inherit;" text="Minutes" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <TextField fx:id="txtMinutes" layoutX="8.0" layoutY="12.0" prefHeight="25.0" prefWidth="82.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="246.0" layoutY="-1.0" prefHeight="69.0" prefWidth="104.0" style="-fx-border-insets: 8 0 0 0; -fx-background-color: inherit; -fx-border-color: #DCDCDC;">
+                     <children>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" style="-fx-padding: 0 5; -fx-background-color: inherit;" text="Seconds" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <TextField fx:id="txtSeconds" layoutX="8.0" layoutY="12.0" prefHeight="25.0" prefWidth="82.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="350.0" layoutY="-1.0" prefHeight="69.0" prefWidth="271.0" style="-fx-border-insets: 8 0 0 0; -fx-background-color: inherit; -fx-border-color: #DCDCDC;">
+                     <children>
+                        <Label alignment="TOP_LEFT" layoutX="14.0" style="-fx-padding: 0 5; -fx-background-color: inherit;" text="Number of Keys to Automate" />
+                        <AnchorPane layoutX="3.0" layoutY="28.0" prefHeight="48.0" prefWidth="249.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <TextField fx:id="txtNumberOfKeys" layoutX="8.0" layoutY="12.0" prefHeight="25.0" prefWidth="82.0" text="0" />
+                              <Label layoutX="105.0" layoutY="15.0" text="0 =&gt; Infinite until Stopped" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</GridPane>
